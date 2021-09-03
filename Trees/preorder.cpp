@@ -43,7 +43,7 @@ struct Node {
 // 	Inorder(root->right);
 // }
 
-void Postorder(struct Node *root)
+void Postorder(Node *root)
 {
 	if (root == NULL)
 	{
