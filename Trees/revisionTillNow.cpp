@@ -227,31 +227,14 @@ int main()
 	// cout << endl;
 	// InorderRecursion(root);
 
-	stack<int> IterativePostOrderStack = IterativePostOrder(root);
-	while (!IterativePostOrderStack.empty())
-	{
-		cout << IterativePostOrderStack.top() << " ";
-		IterativePostOrderStack.pop();
-	}
-	cout << endl;
-	InorderRecursion(root);
+	// stack<int> IterativePostOrderStack = IterativePostOrder(root);
+	// while (!IterativePostOrderStack.empty())
+	// {
+	// 	cout << IterativePostOrderStack.top() << " ";
+	// 	IterativePostOrderStack.pop();
+	// }
+	// cout << endl;
+	// InorderRecursion(root);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
