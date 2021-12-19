@@ -30,11 +30,41 @@ struct TreeNode
 
 };
 
+int maxDeapthOfTree(TreeNode *root)
+{
+	if (root == NULL) {return 0;}
+	else
+	{
+		return 1 + max( maxDeapthOfTree(root->left) , maxDeapthOfTree(root->right) );
+	}
+}
+
+
+
 int main()
 {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cout.tie(0);
+
+	TreeNode *root = new TreeNode(3);
+	root->left = new TreeNode(11);
+	root->right = new TreeNode(9);
+
+	TreeNode *root1 = root->left;
+	TreeNode *root2 = root->right;
+
+	root1->left = new TreeNode(4);
+	root1->right = new TreeNode(89);
+	root1->right->left = new TreeNode(100);
+
+	root1->right->left->right = new TreeNode(10);
+
+
+	root2->left = new TreeNode(542);
+
+	cout << maxDeapthOfTree(root);
+
 
 
 }

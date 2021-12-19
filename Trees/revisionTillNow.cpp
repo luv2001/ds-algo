@@ -1,11 +1,11 @@
-#include <cstdio>
-#include <iostream>
-#include <vector>
-#include <map>
-#include <stack>
-#include <queue>
+// #include <cstdio>
+// #include <iostream>
+// #include <vector>
+// #include <map>
+// #include <stack>
+// #include <queue>
 
-// #include <bits/stdc++.h>
+#include <bits/stdc++.h>
 
 #define db1(x) cout<<#x<<"="<<x<<'\n'
 #define db2(x,y) cout<<#x<<"="<<x<<","<<#y<<"="<<y<<'\n'
@@ -150,15 +150,16 @@ stack<int> IterativePreorder(TreeNode *root)
 stack<int> IterativePostOrder(TreeNode *root)
 {
 	stack<int> ans;
+
 	if (root == NULL)
 	{
 		return ans;
 	}
 	else
 	{
-		TreeNode *node;
 		stack<TreeNode*> st1;
 		st1.push(root);
+		TreeNode *node;
 
 		while (!st1.empty())
 		{
@@ -167,8 +168,6 @@ stack<int> IterativePostOrder(TreeNode *root)
 			st1.pop();
 			if (node->left != NULL) {st1.push(node->left);}
 			if (node->right != NULL) {st1.push(node->right);}
-
-
 		}
 		return ans;
 	}
